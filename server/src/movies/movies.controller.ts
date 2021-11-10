@@ -21,10 +21,7 @@ import AuthUser from 'src/auth/auth-user.decorator';
 export class MoviesController {
   constructor(private service: MoviesService) {}
 
-<<<<<<< HEAD
-=======
-  // Um usuário ADMIN logado pode criar um filme
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
+
   @Post('create')
   @Role(UserRole.ADMIN)
   @UseGuards(AuthGuard(), RolesGuard)
@@ -32,30 +29,19 @@ export class MoviesController {
     return this.service.create(data);
   }
 
-<<<<<<< HEAD
-=======
-  // Qualquer usuário logado pode listar os filmes
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
+
   @Get('find-all')
   @UseGuards(AuthGuard())
   findMany(): Promise<Movie[]> {
     return this.service.findMany();
   }
 
-<<<<<<< HEAD
-=======
-  // Qualquer usuário logado pode listar um filme pelo seu ID
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
   @Get('find/:id')
   @UseGuards(AuthGuard())
   findUnique(@Param('id') id: string): Promise<Movie> {
     return this.service.findUnique(id);
   }
 
-<<<<<<< HEAD
-=======
-  // Um usuário ADMIN logado pode deletar um filme
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
   @Delete('delete/:id')
   @Role(UserRole.ADMIN)
   @UseGuards(AuthGuard(), RolesGuard)
@@ -63,10 +49,6 @@ export class MoviesController {
     return this.service.deleteOne(id);
   }
 
-<<<<<<< HEAD
-=======
-  // Usuário logado pode curtir um filme
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
   @Get('like/:id')
   @UseGuards(AuthGuard())
   likeMovie(

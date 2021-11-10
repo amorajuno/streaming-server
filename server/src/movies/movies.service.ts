@@ -16,7 +16,6 @@ export class MoviesService {
     return movies;
   }
 
-<<<<<<< HEAD
   //tentando estruturar busca por nome parcial
   //   async findByName(name: string): Promise<Movie> {
   //     const movie = await this.db.movie.findFirst({
@@ -26,19 +25,14 @@ export class MoviesService {
   //     return movie;
   //   }
 
-=======
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
+
   async findUnique(id: string): Promise<Movie> {
     const movie = await this.db.movie.findUnique({
       where: { id },
     });
 
     if (!movie) {
-<<<<<<< HEAD
       throw new NotFoundException('ID não encontrado');
-=======
-      throw new NotFoundException('ID Não encontrado na base de dados');
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
     }
 
     return movie;
