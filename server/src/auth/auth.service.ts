@@ -20,11 +20,7 @@ export class AuthService {
     });
 
     if (!user) {
-<<<<<<< HEAD
       throw new NotFoundException('Usuário não encontrado');
-=======
-      throw new NotFoundException('Usuário não existe');
->>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
     }
 
     const hashValid = await bcrypt.compare(password, user.password);
