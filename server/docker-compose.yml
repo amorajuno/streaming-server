@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+<<<<<<< HEAD
+  netfluxpg:
+    image: postgres:alpine
+    ports:
+      - '5432:5432'
+    container_name: 'netfluxpg'
+    restart: always
+    volumes: 
+      - netfluxpg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+      
+volumes:
+  netfluxpg-data:
+
+=======
+  netflixpg:
+    image: postgres:alpine
+    ports:
+      - '5432:5432'
+    container_name: 'netflixpg'
+    restart: always
+    volumes:
+      - netflixpg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+
+volumes:
+  netflixpg-data:
+>>>>>>> 80edcedc6dc2a4d3733d43c6664597a9b9d23e9a
